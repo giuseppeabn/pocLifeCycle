@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.POCLifeCycle">
         <activity
+            android:name=".DialogActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.Dialog"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

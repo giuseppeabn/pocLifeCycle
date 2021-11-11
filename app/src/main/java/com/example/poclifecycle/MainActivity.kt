@@ -1,17 +1,24 @@
 package com.example.poclifecycle
 
+import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.poclifecycle.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private var mediaPlayer: MediaPlayer? = null
     private var position: Int = 0
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.btnCheck.setOnClickListener{
+            startActivity(Intent(this, DialogActivity::class.java))
+        }
         setContentView(R.layout.activity_main)
     }
 
